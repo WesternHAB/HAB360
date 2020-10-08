@@ -158,15 +158,6 @@
 <wire x1="2.846334375" y1="5.352315625" x2="-8.654390625" y2="5.353809375" width="0.127" layer="21"/>
 <wire x1="-8.654390625" y1="5.353809375" x2="-8.648184375" y2="-5.35128125" width="0.127" layer="21"/>
 </package>
-<package name="MINI-LOCK_3">
-<pad name="1" x="0" y="2.48" drill="1" diameter="1.778"/>
-<pad name="2" x="0" y="-0.02" drill="1" diameter="1.778"/>
-<pad name="3" x="0" y="-2.52" drill="1" diameter="1.778"/>
-<wire x1="-8.648184375" y1="-4.123809375" x2="2.853259375" y2="-4.123809375" width="0.127" layer="21"/>
-<wire x1="2.853259375" y1="-4.123809375" x2="2.846334375" y2="4.082315625" width="0.127" layer="21"/>
-<wire x1="2.846334375" y1="4.082315625" x2="-8.654390625" y2="4.083809375" width="0.127" layer="21"/>
-<wire x1="-8.654390625" y1="4.083809375" x2="-8.648184375" y2="-4.123809375" width="0.127" layer="21"/>
-</package>
 <package name="MINI-LOCK_2">
 <pad name="1" x="0" y="1.21" drill="1" diameter="1.778"/>
 <pad name="2" x="0" y="-1.29" drill="1" diameter="1.778"/>
@@ -212,14 +203,6 @@
 <rectangle x1="-5.08" y1="-12.7" x2="5.08" y2="12.7" layer="94"/>
 <text x="-5.08" y="12.7" size="1.778" layer="94">&gt;NAME</text>
 <text x="-5.08" y="-15.24" size="1.778" layer="94">&gt;VALUE</text>
-</symbol>
-<symbol name="MINI-LOCK_3">
-<pin name="1" x="10.16" y="5.08" length="middle" rot="R180"/>
-<pin name="2" x="10.16" y="0" length="middle" rot="R180"/>
-<pin name="3" x="10.16" y="-5.08" length="middle" rot="R180"/>
-<rectangle x1="-5.08" y1="-7.62" x2="5.08" y2="7.62" layer="94"/>
-<text x="-5.08" y="7.62" size="1.778" layer="94">&gt;NAME</text>
-<text x="-5.08" y="-10.16" size="1.778" layer="94">&gt;VALUE</text>
 </symbol>
 <symbol name="MINI-LOCK_2">
 <pin name="1" x="10.16" y="5.08" length="middle" rot="R180"/>
@@ -277,23 +260,6 @@
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="RX" pad="RX"/>
 <connect gate="G$1" pin="TX" pad="TX"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MINI-LOCK_3">
-<gates>
-<gate name="G$1" symbol="MINI-LOCK_3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MINI-LOCK_3">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11839,12 +11805,15 @@ http://dangerousprototypes.com</description>
 <part name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.01uF"/>
 <part name="U1" library="TLV75733PDBVR" deviceset="TLV75733PDBVR" device=""/>
 <part name="D2" library="1N4148WT" deviceset="1N4148WT" device=""/>
-<part name="U$1" library="cust_parts" deviceset="MINI-LOCK_3" device=""/>
 <part name="U$2" library="cust_parts" deviceset="MINI-LOCK_2" device=""/>
 <part name="SV2" library="con-lstb" deviceset="MA15-2" device=""/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0R"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0R"/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0R"/>
+<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4K7"/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4K7"/>
 </parts>
 <sheets>
 <sheet>
@@ -11852,7 +11821,7 @@ http://dangerousprototypes.com</description>
 <text x="-20.32" y="165.1" size="1.778" layer="91">SPI pins to burn bootloader</text>
 <text x="-71.12" y="-40.64" size="3.81" layer="91">12V to 5V regulator</text>
 <text x="-76.2" y="-5.08" size="1.778" layer="91">Upgrade choke to 12uH? Two in series for now</text>
-<text x="101.6" y="-68.58" size="3.81" layer="91">UART interface</text>
+<text x="99.06" y="-73.66" size="3.81" layer="91">UART interface</text>
 <text x="-114.3" y="-86.36" size="3.81" layer="91">5V to 3.3V</text>
 <text x="-55.88" y="30.48" size="3.81" layer="91">ATMEGA328P-AU</text>
 <text x="71.12" y="30.48" size="3.81" layer="91">EBYTE 900M30S</text>
@@ -11874,9 +11843,9 @@ http://dangerousprototypes.com</description>
 <attribute name="NAME" x="16.51" y="82.3214" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="16.51" y="87.122" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="S1" gate="1" x="12.7" y="73.66" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.97" y="67.564" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="15.875" y="65.024" size="1.778" layer="96" rot="R180"/>
+<instance part="S1" gate="1" x="12.7" y="60.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.97" y="54.864" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="15.875" y="52.324" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="SMA" gate="G1" x="53.34" y="55.88" smashed="yes">
 <attribute name="VALUE" x="50.8" y="50.8" size="1.778" layer="96"/>
@@ -12013,13 +11982,9 @@ http://dangerousprototypes.com</description>
 <attribute name="NAME" x="-114.3" y="-59.96" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="-114.3" y="-80.2" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="D2" gate="G$1" x="12.7" y="93.98" smashed="yes">
-<attribute name="NAME" x="7.61298125" y="97.52481875" size="2.08563125" layer="95" ratio="10" rot="SR0"/>
-<attribute name="VALUE" x="7.58326875" y="102.65985" size="2.088559375" layer="96" ratio="10" rot="SR0"/>
-</instance>
-<instance part="U$1" gate="G$1" x="167.64" y="-48.26" smashed="yes">
-<attribute name="NAME" x="162.56" y="-40.64" size="1.778" layer="94"/>
-<attribute name="VALUE" x="162.56" y="-58.42" size="1.778" layer="94"/>
+<instance part="D2" gate="G$1" x="12.7" y="71.12" smashed="yes">
+<attribute name="NAME" x="10.91498125" y="67.04481875" size="2.08563125" layer="95" ratio="10" rot="SR0"/>
+<attribute name="VALUE" x="5.842" y="73.152" size="2.088559375" layer="96" ratio="10" rot="SR0"/>
 </instance>
 <instance part="U$2" gate="G$1" x="-124.46" y="-25.4" smashed="yes">
 <attribute name="NAME" x="-129.54" y="-17.78" size="1.778" layer="94"/>
@@ -12040,6 +12005,22 @@ http://dangerousprototypes.com</description>
 <instance part="R11" gate="G$1" x="127" y="71.12" smashed="yes">
 <attribute name="NAME" x="122.936" y="67.5386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="129.794" y="68.072" size="1.778" layer="96"/>
+</instance>
+<instance part="C5" gate="G$1" x="101.6" y="-55.88" smashed="yes" rot="R180">
+<attribute name="NAME" x="100.076" y="-56.261" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="107.696" y="-51.181" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="C6" gate="G$1" x="91.44" y="-55.88" smashed="yes" rot="R180">
+<attribute name="NAME" x="89.916" y="-56.261" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="97.536" y="-51.181" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="R12" gate="G$1" x="-7.62" y="106.68" smashed="yes" rot="R270">
+<attribute name="NAME" x="-6.1214" y="110.49" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-10.922" y="110.49" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="R13" gate="G$1" x="0" y="106.68" smashed="yes" rot="R270">
+<attribute name="NAME" x="1.4986" y="110.49" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-3.302" y="110.49" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
 <busses>
@@ -12096,10 +12077,10 @@ http://dangerousprototypes.com</description>
 <segment>
 <pinref part="S1" gate="1" pin="P"/>
 <pinref part="S1" gate="1" pin="P1"/>
-<wire x1="17.78" y1="76.2" x2="17.78" y2="73.66" width="0.1524" layer="91"/>
-<junction x="17.78" y="73.66"/>
-<wire x1="17.78" y1="73.66" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
-<label x="20.32" y="73.66" size="1.778" layer="95"/>
+<wire x1="17.78" y1="63.5" x2="17.78" y2="60.96" width="0.1524" layer="91"/>
+<junction x="17.78" y="60.96"/>
+<wire x1="17.78" y1="60.96" x2="25.4" y2="60.96" width="0.1524" layer="91"/>
+<label x="20.32" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="EBYTE_900M30S" gate="G$1" pin="1_GND"/>
@@ -12232,6 +12213,16 @@ http://dangerousprototypes.com</description>
 <wire x1="99.06" y1="137.16" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
 <label x="99.06" y="137.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="-58.42" x2="101.6" y2="-60.96" width="0.1524" layer="91"/>
+<label x="99.06" y="-66.04" size="1.778" layer="95"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="-60.96" x2="101.6" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="-58.42" x2="91.44" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="-60.96" x2="101.6" y2="-60.96" width="0.1524" layer="91"/>
+<junction x="101.6" y="-60.96"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -12266,6 +12257,17 @@ http://dangerousprototypes.com</description>
 <pinref part="SV2" gate="G$1" pin="31"/>
 <wire x1="83.82" y1="139.7" x2="78.74" y2="139.7" width="0.1524" layer="91"/>
 <label x="78.74" y="139.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="+5V"/>
+<wire x1="106.68" y1="-50.8" x2="101.6" y2="-50.8" width="0.1524" layer="91"/>
+<label x="81.28" y="-50.8" size="1.778" layer="95"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="-50.8" x2="91.44" y2="-50.8" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="-50.8" x2="81.28" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="91.44" y="-50.8"/>
+<junction x="101.6" y="-50.8"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -12360,22 +12362,23 @@ http://dangerousprototypes.com</description>
 </net>
 <net name="PC6/RESET" class="0">
 <segment>
-<pinref part="ATMEGA328P-AU" gate="A" pin="PC6"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="-17.78" y1="83.82" x2="2.54" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="S"/>
-<wire x1="2.54" y1="83.82" x2="5.08" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="83.82" x2="7.62" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="83.82" x2="2.54" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="73.66" x2="7.62" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="60.96" x2="7.62" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="S1"/>
-<wire x1="7.62" y1="73.66" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="60.96" x2="7.62" y2="63.5" width="0.1524" layer="91"/>
 <label x="-15.24" y="83.82" size="1.778" layer="95"/>
-<junction x="2.54" y="83.82"/>
-<junction x="7.62" y="73.66"/>
+<junction x="7.62" y="60.96"/>
+<pinref part="ATMEGA328P-AU" gate="A" pin="PC6"/>
+<wire x1="-17.78" y1="83.82" x2="2.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="60.96" x2="2.54" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="2.54" y1="83.82" x2="5.08" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$1" pin="A"/>
-<wire x1="7.62" y1="93.98" x2="5.08" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="93.98" x2="5.08" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="83.82" x2="7.62" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="83.82" x2="5.08" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="71.12" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
+<junction x="5.08" y="83.82"/>
+<junction x="2.54" y="83.82"/>
 </segment>
 <segment>
 <pinref part="ICSP" gate="1" pin="5"/>
@@ -12517,10 +12520,10 @@ http://dangerousprototypes.com</description>
 <wire x1="17.78" y1="83.82" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
 <label x="20.32" y="83.82" size="1.778" layer="95"/>
 <wire x1="20.32" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="93.98" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="71.12" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
 <junction x="20.32" y="83.82"/>
 <pinref part="D2" gate="G$1" pin="C"/>
-<wire x1="17.78" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="71.12" x2="20.32" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ICSP" gate="1" pin="2"/>
@@ -12548,6 +12551,7 @@ http://dangerousprototypes.com</description>
 <label x="-132.588" y="61.468" size="1.778" layer="95"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="-124.46" y1="60.96" x2="-129.54" y2="60.96" width="0.1524" layer="91"/>
+<junction x="-124.46" y="60.96"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="OUT"/>
@@ -12562,6 +12566,16 @@ http://dangerousprototypes.com</description>
 <pinref part="SV2" gate="G$1" pin="29"/>
 <wire x1="83.82" y1="142.24" x2="78.74" y2="142.24" width="0.1524" layer="91"/>
 <label x="78.74" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="-7.62" y1="111.76" x2="-7.62" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-7.62" y1="114.3" x2="0" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="0" y1="114.3" x2="0" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="0" y1="114.3" x2="7.62" y2="114.3" width="0.1524" layer="91"/>
+<junction x="0" y="114.3"/>
+<label x="2.54" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PB1" class="0">
@@ -12677,6 +12691,7 @@ http://dangerousprototypes.com</description>
 <pinref part="ATMEGA328P-AU" gate="A" pin="PB6"/>
 <wire x1="-53.34" y1="60.96" x2="-73.66" y2="60.96" width="0.1524" layer="91"/>
 <label x="-66.04" y="60.96" size="1.778" layer="95"/>
+<junction x="-73.66" y="60.96"/>
 </segment>
 <segment>
 <pinref part="SV2" gate="G$1" pin="5"/>
@@ -12686,26 +12701,34 @@ http://dangerousprototypes.com</description>
 </net>
 <net name="PC4" class="0">
 <segment>
-<pinref part="ATMEGA328P-AU" gate="A" pin="PC4"/>
-<wire x1="-17.78" y1="88.9" x2="-10.16" y2="88.9" width="0.1524" layer="91"/>
-<label x="-15.24" y="88.9" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="SV2" gate="G$1" pin="13"/>
 <wire x1="83.82" y1="162.56" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
 <label x="78.74" y="162.56" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="ATMEGA328P-AU" gate="A" pin="PC4"/>
+<wire x1="-17.78" y1="88.9" x2="-7.62" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="-7.62" y1="88.9" x2="7.62" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="101.6" x2="-7.62" y2="88.9" width="0.1524" layer="91"/>
+<junction x="-7.62" y="88.9"/>
+<label x="2.54" y="88.9" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PC5" class="0">
-<segment>
-<pinref part="ATMEGA328P-AU" gate="A" pin="PC5"/>
-<wire x1="-17.78" y1="86.36" x2="-10.16" y2="86.36" width="0.1524" layer="91"/>
-<label x="-15.24" y="86.36" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="SV2" gate="G$1" pin="14"/>
 <wire x1="99.06" y1="162.56" x2="104.14" y2="162.56" width="0.1524" layer="91"/>
 <label x="99.06" y="162.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ATMEGA328P-AU" gate="A" pin="PC5"/>
+<wire x1="-17.78" y1="86.36" x2="0" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="0" y1="86.36" x2="7.62" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="0" y1="101.6" x2="0" y2="86.36" width="0.1524" layer="91"/>
+<junction x="0" y="86.36"/>
+<label x="2.54" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PD2" class="0">
@@ -12895,11 +12918,6 @@ http://dangerousprototypes.com</description>
 <wire x1="-124.46" y1="55.88" x2="-121.92" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<junction x="5.08" y="83.82"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="EBYTE_900M30S" gate="G$1" pin="7_TXEN"/>
@@ -12940,24 +12958,24 @@ http://dangerousprototypes.com</description>
 <approved hash="104,1,109.22,78.74,EBYTE_900M30S,9_VCC,+5V,,,"/>
 <approved hash="104,1,109.22,81.28,EBYTE_900M30S,10_VCC,+5V,,,"/>
 <approved hash="104,1,109.22,83.82,EBYTE_900M30S,11_GND,GND,,,"/>
-<approved hash="104,1,-71.12,99.06,ATMEGA328P-AU,VCC_2,+3.3V,,,"/>
-<approved hash="104,1,-71.12,96.52,ATMEGA328P-AU,VCC,+3.3V,,,"/>
-<approved hash="104,1,-71.12,93.98,ATMEGA328P-AU,AVCC,+3.3V,,,"/>
-<approved hash="104,1,-86.36,-73.66,AMS1117,ADJ/GND,GND,,,"/>
+<approved hash="104,1,-53.34,99.06,ATMEGA328P-AU,VCC_2,+3.3V,,,"/>
+<approved hash="104,1,-53.34,96.52,ATMEGA328P-AU,VCC,+3.3V,,,"/>
+<approved hash="104,1,-53.34,93.98,ATMEGA328P-AU,AVCC,+3.3V,,,"/>
 <approved hash="105,1,90.17,22.86,N$2,,,,,"/>
-<approved hash="108,1,-43.18,187.96,N$2,,,,,"/>
-<approved hash="108,1,30.48,187.96,N$2,,,,,"/>
 <approved hash="108,1,30.48,121.92,N$2,,,,,"/>
-<approved hash="108,1,-71.12,-91.44,N$2,,,,,"/>
 <approved hash="108,1,-134.62,22.86,N$2,,,,,"/>
-<approved hash="108,1,30.48,22.86,N$2,,,,,"/>
-<approved hash="108,1,149.86,22.86,N$2,,,,,"/>
-<approved hash="108,1,149.86,121.92,N$2,,,,,"/>
-<approved hash="108,1,-134.62,-48.26,N$2,,,,,"/>
-<approved hash="108,1,30.48,-91.44,N$2,,,,,"/>
 <approved hash="108,1,-43.18,121.92,N$2,,,,,"/>
 <approved hash="108,1,-134.62,121.92,N$2,,,,,"/>
+<approved hash="108,1,-71.12,-91.44,N$2,,,,,"/>
+<approved hash="108,1,149.86,121.92,N$2,,,,,"/>
+<approved hash="108,1,-134.62,-48.26,N$2,,,,,"/>
+<approved hash="108,1,30.48,22.86,N$2,,,,,"/>
+<approved hash="108,1,30.48,-91.44,N$2,,,,,"/>
+<approved hash="108,1,30.48,187.96,N$2,,,,,"/>
+<approved hash="108,1,149.86,22.86,N$2,,,,,"/>
+<approved hash="108,1,-43.18,187.96,N$2,,,,,"/>
 <approved hash="113,1,-99.06,162.126,TR1,,,,,"/>
+<approved hash="113,1,91.44,153.38,SV2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
