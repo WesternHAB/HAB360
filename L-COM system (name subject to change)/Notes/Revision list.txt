@@ -1,0 +1,32 @@
+*No RF traces under module - Is very short now, directly to antenna
+*TCXO instead of crystal, or use internal oscillator - Added TCXO
+*3.3V regulator capacitors - Added
+*GND under antenna line
+*Higher-value resistance LEDs - Can just remove the pull-up resistor
+*IN4148 instead of IN4007 - Done
+*Wide power traces - Done
+*Better power connector - Used a Molex Mini-lock
+*Lots of vias under module
+*I2C pullup resistors - Added 4K7 resistors pulling up to 3.3V
+*Replace 0.1uF with 0.1uF and 0.01uF. Smaller value closer to chips - Done
+*Swap out AMS1117 - Swapped out for TLV75733PDBVR
+*Add vias around the board to avoid resonant structures
+*Design RF trace for 50 ohm impedance
+
+
+
+Antenna stuff, the antenna is already 50 ohms impedance.
+
+
+At high altitude, RF outputdoesnt need to be high.
+E.g. guy uses VHF and 50mW. Reduces output when altitude is above a couple thousand meters.
+
+Avoid Elecrolytics at high altitude.
+
+
+
+
+-----NEW-----
+Replace SMA connector with https://www.digikey.com/en/products/detail/taoglas-limited/EMPCB-SMAFSTJ-B-HT/3522337 (Make sure its the right M/F).
+
+Add a tantalum capacitor. Either type R or P (corresponds to 0805 footprint). Get atleast 10V, higher the capacitance the better.

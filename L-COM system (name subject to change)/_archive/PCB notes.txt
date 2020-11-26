@@ -1,0 +1,3 @@
+ORDER A STENCIL WITH THE PCB.
+
+Can use the stencil to apply solder paste, place components, then heat it up (e.g. with clothes iron?)

@@ -1,0 +1,8 @@
+*Power system should introduce a soft startup circuit for any attached payloads.
+
+*Should offer 12V line, perhaps a 5V line as well? Or they can deal with it.
+	-For us, 12V line is easiest and payload can convert it if needed..
+
+*It should also manage the temperature of its batteries
+	-Thermistors, heating pads.
+	-Power sys should be able to provide constant voltage/current despite sudden draws from heating pads/comm sys/whatnot

@@ -1,0 +1,48 @@
+3.3V regulator. SPX3819MV-3.3 SOT23-5 package. M5 is lower dropout? Very low quiescent, good temperature range. Very cheap.
+
+5V regulator. Seems there are pertty cheap ones to use, capable of 1A? e.g.LM7805, up to 35V input. 8mA max quiescent.
+LM7805CT, not ACT (temp range). CT version is good range. Pins match as well. (also already have these).
+Voltage dropout of up to 2V at 1A, but not a concern as long as we use atleast 7V (should use ~12V).
+Alternatives: KA7805 (identical?), LM1117 (800mA output?)
+
+
+
+Have:
+*caps
+-100nF (50V)
+-22uF tant (33uF though?)
+*resistors
+-0R
+-10K
+-1K
+-220R (200 though?)
+-1K8
+-1K
+*misc
+-Switches (sorta)
+-LEDs
+-D1
+-5V regulator
+
+Need:
+-Inductor? (have some though, size? 5.6uH) ^
+*caps
+-10uF (50V) ^
+-1uF ^
+-10nF ^
+-1nF
+*resistors
+-4K7 ^
+-Thermistor ^
+*misc
+-1A fuse ^(1.1A)
+-ZD1 ^ (sod3-23)
+-3.3V regulator ^
+*connectors
+-4 pin (screw terminalx2)^
+-2 pin (screw terminalx1)^
+-Female header? (male pin)^
+-Fitting clock source?
+
+
+

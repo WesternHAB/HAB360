@@ -1,0 +1,26 @@
+Correct SMA sizing: Molex one is wide, but $5 each. Theres the RF connectors one for $2 but smaller footprint. See if we can find the smaller footprint?
+Direction markings for LEDs, tantalum capacitors.
+Give L1 and pin header space between them.
+
+
+
+
+
+
+
+
+Resistors: Used a 220 instead of 200 for LEDs.
+Bought cheaper thermistor
+Swap out for the smaller footprint SMA connector. For now, just adapt your own.
+
+
+Need:
+Connectors
+Reset diode
+Inductor
+Clock source
+Tantalum caps
+10uF ceramics (??? do these even exist, did they mean 1uF?? Although I think I have them in the cart..)
+SMA connector
+Female header (can use male for now)
+NO ICSP header now? (Too big?)

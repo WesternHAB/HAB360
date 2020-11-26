@@ -1,0 +1,17 @@
+https://hackaday.io/project/169231-lora-gps-beacon-for-high-altitude-ballooning
+
+6.5" wire...
+Used a mag-mount roof top antenna to receive?
+
+
+Wait, LoRa is unlicensed??? Or is that just in the US?
+
+
+
+https://hackaday.io/project/173879-lora-image-and-video-transmission-ai-on-edgex
+Some explanation of LoRa parameters
+
+
+
+Some crazy ranges with low power LOS 2/3rds through page:
+https://www.instructables.com/Introducing-LoRa-/

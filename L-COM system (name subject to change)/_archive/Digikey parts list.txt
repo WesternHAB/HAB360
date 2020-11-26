@@ -1,0 +1,15 @@
+TCXO (15pF, 3.3V): 	https://www.digikey.ca/en/products/detail/ecs-inc/ECS-TXO-2016-33-120-TR/10244135
+3.3V regulator: 	https://www.digikey.ca/en/products/detail/texas-instruments/TLV75733PDBVR/9343364
+1N4148WT diode: 	https://www.digikey.com/product-detail/en/on-semiconductor/1N4148WT/1N4148WTCT-ND/2094398
+
+Mini-Lock series 53426
+Don't really need the 4-pos one but kept it here anyways
+2-pos Molex Mini-Lock: 	https://www.digikey.ca/en/products/detail/molex/0534260210/2405259
+	Insert conn: 	https://www.digikey.ca/en/products/detail/molex/0511630200/3262546
+3-pos Molex Mini-Lock: 	https://www.digikey.ca/en/products/detail/molex/0534260310/3044639
+	Insert conn: 	https://www.digikey.ca/en/products/detail/molex/0511630300/3262547
+4-pos Molex Mini-Lock: 	https://www.digikey.ca/en/products/detail/molex/0534260410/2405238
+	Insert conn: 	https://www.digikey.ca/en/products/detail/molex/0511630400/3262548
+Socket contact crimp: 	https://www.digikey.ca/en/products/detail/molex/0503518000/2405712
+
+*R3 and R6 are optional resistors - they control the Tx and Rx LEDs

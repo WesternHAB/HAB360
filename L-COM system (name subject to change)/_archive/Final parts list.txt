@@ -1,0 +1,24 @@
+connectors
+inductors
+mmz diode
+pin header
+smaller icsp
+
+
+1x RLS-567		https://www.digikey.ca/en/products/detail/recom-power/RLS-567/9920569
+1x MMSZ4690T1G		https://www.digikey.ca/en/products/detail/on-semiconductor/MMSZ4690T1G/964645
+1x TLV75733PDBVR	https://www.digikey.ca/en/products/detail/texas-instruments/TLV75733PDBVR/9343364
+1x ECS-TXO		https://www.digikey.ca/en/products/detail/ecs-inc/ECS-TXO-2016-33-120-TR/10244143
+1x ICSP			https://www.digikey.ca/en/products/detail/w%C3%BCrth-elektronik/61200621621/4846913
+1x pin header 		https://www.digikey.ca/en/products/detail/sullins-connector-solutions/PPTC152LFBN-RC/810221
+1x tactile switch	https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/430152043826/5208994
+
+
+
+SMA
+thermistor
+caps
+resistors
+Green LEDs
+Fuses
+	

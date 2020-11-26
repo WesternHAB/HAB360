@@ -1,0 +1,33 @@
+Bootloader (need to burn a new one):
+1.8V brownout
+12MHz external
+
+CH340G level shifts to 3.3V needed to program the ATMEGA. Uses 1K and 1.8K resistors to voltage divide (+1K pullup resistor for the LEDs)
+
+Well it seems, DONT use untinned copper wires... They were adding a bunch of resistance to the circuit, making the ground on one side 0.3V higher.
+It can be used for e.g. clocks and short stuff safely though I suppose.
+
+Working great for 12 hours!
+
+
+Default trace width is 6 mil. For 1A, need 6.8? Should up it more anyways.
+Default trace spacing is 6 mil, which is Oshpark's requirments as well.
+
+
+USBISP programmer: https://www.amazon.ca/KeeYees-Downloader-Programmer-Adapter-Microcontroller/dp/B0885RKVMC/ref=pd_sbs_23_4/131-3220714-2980837
+Can run at 3.3V
+
+Added fuse to 5V line of USB.
+Need over-voltage protection too though?
+Don't need it on the D+ and D- since the CH340G can just get destroyed instead.
+
+Molex header: https://www.digikey.ca/en/products/detail/molex/0534260410/2405238?s=N4IgTCBcDaIKwGYAsYBsAGJBGdIC6AvkA
+Molex cable: https://www.digikey.ca/en/products/detail/molex/0151370402/9759738?s=N4IgTCBcDaIIwFY4GYDsAGALOiBdAvkA
+
+
+
+To do:
+Add the thermistor to the PCB.
+Add some wires to the small LEDs and inductor, try them out to make sure they don't blow.
+Build up a list of parts, and see if we can get them all through Digikey (or related).
+Rename components based on their position on the board.

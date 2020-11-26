@@ -1,0 +1,13 @@
+According to US902-928,
+https://lora-alliance.org/sites/default/files/2018-07/lorawan_regional_parameters_v1.0.3reva_0.pdf
+
+Keep in mind this is for LoRaWAN, NOT regular LoRa communication
+
+Modulation (Should):
+	-Sync word: 0x34
+	-Preamble length: 8 symbols
+
+
+...Yea this is all irrelevant.
+
+What is our allowed duty cycle?

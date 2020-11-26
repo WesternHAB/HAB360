@@ -1,0 +1,8 @@
+Seems theres was a ground wire that kept disconnecting, even though it was right in the holes. Perhaps internal damage to it?
+
+Use jumper wires, and place them as close to the component in the rows as possible to minimize chances that there is a disconnect in the board.
+
+
+Recent problem seems to have been with the power supply?
+
+Jiggling wires seemed to affect it. Disconnecting the Recom 5V (since it wasnt supplied via jack) fixed it? But then put it back after and it still worked

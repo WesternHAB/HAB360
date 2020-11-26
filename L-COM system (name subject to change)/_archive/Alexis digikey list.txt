@@ -1,0 +1,27 @@
+Pretty much just remove old LCOM stuff, revise.
+
+
+CubeSat
+https://www.digikey.com/product-detail/en/maxim-integrated/MAX1249BCPE/MAX1249BCPE-ND/1016370 -------- 3
+https://www.digikey.ca/en/products/filter/interface-drivers-receivers-transceivers/710?s=N4IgTCBcDaIM4DsBsBWAxgRgyAugXyA ------------ 10
+https://www.digikey.ca/en/products/filter/interface-drivers-receivers-transceivers/710?s=N4IgTCBcDaIMoDkBsBWAwgRg0gHAURAF0BfIA
+https://www.digikey.ca/catalog/en/partgroup/usb-rs422/8691 ------------ 2
+
+
+Comms module
+https://www.digikey.com/product-detail/en/recom-power/RLS-567/945-30004968-ND/9920569 ----------- 5
+https://www.digikey.ca/en/products/detail/on-semiconductor/MMSZ4690T1G/964645 ------------ 10
+https://www.digikey.ca/en/products/detail/sullins-connector-solutions/PPTC152LFBN-RC/810221
+https://www.digikey.ca/en/products/detail/w%C3%BCrth-elektronik/61200621621/4846913
+
+4-pos conn
+https://www.digikey.ca/en/products/detail/molex/0534260410/2405238 ------------ 10
+https://www.digikey.ca/en/products/detail/molex/0151370402/9759738 ------------ 2
+https://www.digikey.ca/en/products/detail/molex/0511630400/3262548 ------------ 5
+
+General micro-lock connector
+https://www.digikey.ca/en/products/detail/molex/0503518000/2405712 ------------ 40
+
+
+
+Add flux pen to digikey, or get off of Amazon?

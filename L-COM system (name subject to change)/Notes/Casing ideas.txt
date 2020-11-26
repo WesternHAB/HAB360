@@ -1,0 +1,12 @@
+Can take inspiration form PC-106 stack.
+
+Female head can have long male pins underneath, this would allow it to stack with other boards.
+
+e.g. casing only goes around THE SIDES for a module.
+There would be specified end cap parts (top/bottom of stack), that cover the male/female ends of stack.
+Rods could go through all four corners of the stack, and be bolted on the outside of the end caps to hold it all together and less stress on the header.
+
+e.g. for power supply, can have another ATMEGA328P-AU (probably shouldnt connect all its pins), that connects on I2C. It reads voltages of batteries, returns on I2C.
+It also manages heating of the batteries.
+
+Can have a specified payload board as well. Also on the stack, it has connections to the comms module/power module (UART for now, but maybe I2C instead?)

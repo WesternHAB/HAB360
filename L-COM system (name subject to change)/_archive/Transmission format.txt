@@ -1,0 +1,160 @@
+1 bit sign
+8 bits for mantissa
+bits for decimal part?
+
+Alternatively, the decimal part can be displayed with some number of bits as an actual number.
+
+Option, 2 bytes?
+
+How many decimal places?
+http://wiki.gis.com/wiki/index.php/Decimal_degrees
+So probably 4, maybe 5. Maybe 3 but thats pushing it.
+
+-xxx.xxxx
+
+So max values,
+
+-180.9999
+
+Seems we will need 3 bytes minimum.
+
+1 bit for sign
+8 bits for mantissa (0-180)
+14 bits for decimal (1 bit left over)
+=23 bits
+*2 = 46 bits (2 bits left over)
+
+
+what if we combined data space for them, e.g. 1 byte holds the signs or something?
+
+
+If we combine whole+decimal into a single number, we can save a bit or two
+e.g. max is 1809999
+-21 bits to hold that value
+-1 bit for sign
+=22 bits (2 extra)
+*2 = 44 bits (4 left over)
+
+
+3 decimals:
+180999
+-18 bits num
+-1 bit sign
+*2 = 38 bits
+
+
+Lat: 0-90 (7 bits)(1 bit sign) = 8 bits
+lng: 0-180 (8 bits)(1 bit sign) = 9 bits
+Can be negative/positive, or use a N,S,E,W
+GPS outputs in -/+
+Optionally, we may assume the highest significant digit wont change but thats a bit sketchy...
+
+
+Ok so whole num by combining into one big num:
+
+[ 4 decimal digits precision ]
+LNG (0-180), -1809999:
+-1 bit sign
+-21 bits num
+LAT (0-19), -909999:
+-1 bit sign
+-20 bits num
+--------------------
+=43 bits
+
+[ 3 decimal digits precision ]
+LNG (0-180), -180999:
+-1 bit sign
+-18 bits num
+LAT (0-19), -90999:
+-1 bit sign
+-17 bits num
+--------------------
+=37 bits
+
+
+Altitude we can do to an accuracy of 100m, so cut two digits off
+We expect a range from 0 to 50000, unsigned
+So, max value is:
+-500
+-Can be handled with 9 bits (max value of 512)
+
+Using 3 digit precision,
+37 + 9 = 46 bits
+2 bits for determining packet type! (e.g. 0-3, GPS, msg, status, etc...)
+=6 bytes total
+
+Using 4 digit precision
+43 + 9 = 52 bits
+4 bits for other usage
+=7 bytes total
+
+
+
+
+From the Wiki article on 16 bit floats,
+https://en.wikipedia.org/wiki/Half-precision_floating-point_format#Half_precision_examples
+
+PRECISIONS:
+Decimals between 64 and 128: fixed interval 2^(−4)
+Decimals between 128 and 256: fixed interval 2^(−3)
+
+
+Custom float format?
+16 bits
+4 bit exponent
+-1 bit sign
+-3 bit num (2^3 = 8, thus 2^8 = 256)
+11 bit fraction
+-2^(-5) precision on range 64-128
+
+
+We want 2^(-10) precision (basically 3 decimals),
+2^(-11) precision (0.0005 error) if preferably,
+less if possible.
+
+So assuming this is how it works,
+4 bit exponent
+16 bit fraction?
+=20 bits
+
+*2 + 9 = 49 bits
+
+
+With 17 bit fractions,
+*2 + 9 = 51 bits
+
+
+
+So if we fit it into 7 bytes (56 bits)
+9 bits altitude (-> 47)
+-1 bit left over, thus both lat/lng get 23 bits
+-using 23 bits: 4 bit exponent, 19 bits fraction:
+-We get 2^(-13) = 0.0001 intervals at range 64 to 128
+This actually seems marginally worse??
+
+
+
+
+
+SO GO WITH THIS?
+
+[ 4 decimal digits precision ]
+LNG (0-180), -1809999:
+-1 bit sign
+-21 bits num
+LAT (0-19), -909999:
+-1 bit sign
+-20 bits num
+--------------------
+=43 bits
+
+Altitude:
+100m error, 9 bits
+
+4 bits left over
+If we use those bits for altitude, 
+50000/7 = 7143 (rounded) which is below 2^(9+4) = 8192 (this num itself allows for 6.1m precision)
+
+Thus, we can encode up to 57,344m with 7m error using 13 bits
+But if we have the option just use 16 bits (short) and get the exact number...
