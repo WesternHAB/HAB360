@@ -1,0 +1,66 @@
+-----------------------------------------------------
+
+Need a process to initiate LoRa parameter changes mid-flight:
+
+e.g. send a message to balloon to switch to these parameters.
+Maybe send message, switch our own parameters as well.
+
+
+1. Enter a period, e.g. 10 seconds of transmissions.
+
+2. Each transceiver will send a message containing two bytes:
+	1. How many times they have seen the other's message
+	2. The byte value in the other's message
+   Thus, we will know that THEY know we have seen their messages as well.
+
+3. Once the period ends, and both byte values are one (or higher if incrementing continuously):
+	Stay in this new transmission mode.
+   If one of the byte values is still zero (one transceiver still hasn't seen the other):
+	Revert back, or enter the highest-range mode.
+
+-----------------------------------------------------
+
+Data redundancy:
+
+When transmitting status codes or data, we can choose to use a redundancy method by duplicating bytes, and taking a 'majority vote' in case one is different.
+
+Redundancy modes: 1, 3?
+	1: No redundancy, bytes are not duplicated. Packet length = max.
+	3: 3x redundancy, 3 bytes for a single byte. PAcket length = max/3.
+
+This can be defined in a LoRa library for the board itself? Settable through code (or config packets through serial).
+
+-----------------------------------------------------
+
+Repeater beacon:
+
+A possible way to go about balloon recovery. Obviously the power supply onboard the balloon is limited, so we would like to conserve it.
+
+Once landed, it can switch to a repeater mode where it is silent until it picks up messages. When it does, it transmits its own message once.
+This way, it doesn't waste power transmitting messages when there is nothing nearby.
+
+In this mode however, it should probably switch to the max-range settings.
+
+Perhaps messages can be addressed to the attached payload system or comms module. If comms module and is labelled as a repeater message, responds appropriately.
+Once landed, the payload system should otherwise be silent and let the comms module take over recovery.
+
+
+-----------------------------------------------------
+
+Addressing stuff?
+
+Addressed to comms module:
+-Parameter change initiation
+-Repeater message
+-Comms module status?
+
+Address to payload:
+-Payload things
+
+
+
+
+More LoRa notes:
+-People have gotten ranges of 138km WITHOUT an amplifier and with a OMNIDIRECTIONAL antenna.
+
+Apparently a Yagi aerial antenna is ideal for chasing the balloon.

@@ -1,12 +1,13 @@
 Correct SMA sizing: Molex one is wide, but $5 each. Theres the RF connectors one for $2 but smaller footprint. See if we can find the smaller footprint?
-Direction markings for LEDs, tantalum capacitors.
-Give L1 and pin header space between them.
+Give L1 and pin header space between them?
+Flip all silkscreen text to match with the orientation of the EBYTE text.
 
 
 
 
 
-
+Probably not an issue but here in case:
+Possibly move the power LED to after the fuse (If no fuse, e.g. didn't bother with Recom, then power LED won't turn on if powered by UART/pins).
 
 
 Resistors: Used a 220 instead of 200 for LEDs.
