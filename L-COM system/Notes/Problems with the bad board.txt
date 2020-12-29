@@ -1,0 +1,26 @@
+The first board seems fine at max range settings, but the second one seems to suffer resets and hanging at the same settings.
+
+Observations:
+1. A quick press of the reset button doesn't work, need to hold it a bit longer.
+2. Attaching the programmer cable (not attached yet to computer, so unpowered) causes the board to reset several times while the programmer powers up.
+3. Arcing was observed between the 5V output (of Recom regulator) and ground due to leftover flux.
+4. The inductor L1 is damaged.
+
+What may be the issue:
+1. Power supply issues
+
+Specific issues:
+1. I suspect the damaged inductor is a big one, as at low-power settings its fine, but upping it causes problems.
+   This is also seen when attaching the programmer when its capacitors start charging.
+   Thus, I suspect it is not able to provide as much power as it needs to be doing.
+2. On a similar note, the Recom regulator may also be damaged by the arcing observed, and may cause similar issues.
+
+Thus, it is likely one of those two components that are causing the issues. Most likely is the inductor due to the obvious damaged.
+The Recom regulator is a bit more expensive and has built-in safety features, so I suspect it is probably fine.
+
+Possible solutions:
+1. See if its possible to solder the current inductor on better. Its floating quite a bit.
+2. Replace with one of the cheaper inductors of the same value.
+3. Remove the inductor entirely, and bridge the connection.
+
+The inductor is most likely not necessary, although removing it may result in more noise.

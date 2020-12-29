@@ -1,7 +1,7 @@
 Correct SMA sizing: Molex one is wide, but $5 each. Theres the RF connectors one for $2 but smaller footprint. See if we can find the smaller footprint?
 Give L1 and pin header space between them?
 Flip all silkscreen text to match with the orientation of the EBYTE text.
-
+Get the right 2-pin connector for power! The one that we had to buy is way too hard to take out without damaging it.
 
 
 

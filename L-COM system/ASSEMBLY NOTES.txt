@@ -1,0 +1,22 @@
+REMOVE ALL FLUX. VERY IMPORTANT.
+
+Causing issues with the thermistor and power. Saw some arcing across it with the 5V and regulator.
+
+ENSURE AL COMPONENTS ARE SOLDERED AS STRAIGHT AS POSSIBLE.
+
+Having them angled, especially the closely packed resistors/capacitors, can also result in arcing and unable to clean solder between them.
+
+FLUX VERY BAD.
+
+Either it was the flux between the module pads, or the flux between antenna ground and the antenna (at the SMA connector).
+Actually, seems like its due to these intermitent power issues, but it atleast receives a clear message now.
+Power issues possibly between the capacitor and recom?
+
+
+
+Get proper flux for electronics.
+DO NOT use no-clean flux.
+Already have good flux remover!
+
+
+Buy premade cables to avoid unreliable connections. For the rest of these, find a higher guage wire so they can form a better connection.
