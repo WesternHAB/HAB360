@@ -1,0 +1,13 @@
+Flip C1 and C2 to other side, give the inductor A LOT more space. Also, distance the ground plane more from the Vin.
+Distance other components from the 5V RECOM regulator.
+
+Arcing between components has been the main nemesis of this entire build. Mostly that inductor.
+
+
+
+EBYTE:
+DIO to digital pin 2 (PD2)
+rx/tx 3,2 to 6,7
+
+
+Sometimes needs pinMode(DIO1, INPUT_PULLUP); ?? I guess throw the line in in-case

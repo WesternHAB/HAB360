@@ -2,7 +2,7 @@ REMOVE ALL FLUX. VERY IMPORTANT.
 
 Causing issues with the thermistor and power. Saw some arcing across it with the 5V and regulator.
 
-ENSURE AL COMPONENTS ARE SOLDERED AS STRAIGHT AS POSSIBLE.
+ENSURE ALL COMPONENTS ARE SOLDERED AS STRAIGHT AS POSSIBLE.
 
 Having them angled, especially the closely packed resistors/capacitors, can also result in arcing and unable to clean solder between them.
 
@@ -20,3 +20,17 @@ Already have good flux remover!
 
 
 Buy premade cables to avoid unreliable connections. For the rest of these, find a higher guage wire so they can form a better connection.
+
+
+
+
+DO NOT hot air solder the fuse; it will cause it to fail.
+AVOID hot air soldering the EBYTE module. Takes a long time, and chance of it forming bridges underneath. Keep all flux and solder on the OUTSIDE on the pads.
+
+
+
+--------------
+Solder ATMEGA via drag soldering (optionally 3.3V regulator, but its easy with paste)
+Fuse via iron
+All other surface-mount via paste
+EBYTE via iron

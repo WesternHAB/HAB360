@@ -1,0 +1,5 @@
+SNR:
+So it appears this module is actually working amazing?
+LoRa operates below the noise floor ('0dB'). Having a positive SNR means its a strong signal.
+
+Something like WiFi is supposed to operative above the noise floor, so it seems like the LoRa module is actually doing great.

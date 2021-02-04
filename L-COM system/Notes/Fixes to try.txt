@@ -1,0 +1,23 @@
+SNR: (POSSIBLY SOLVED, THE SNR IS APPARENTLY SUPPOSED TO BE AROUND THERE)
+-Nothing yet? Tried some shielding and using pigtail connectors
+-Brief spikes in SNR, possibly after transmitter is plugged in after a while? Indicates issues with transmitter board so swap them.
+-May be issues with the board becoming an antenna (but 915MHz too long for that?)
+-Make two wire-antennas to see if those are the issue (78mm I think?)
+-Try powering both via 12V (e.g. receiver on power?)
+
+1st board (Trench):
+-Possibly the ATMEGA is having issues, but not entirely sure.
+-First try to control an LED with the digital pins (e.g. 2 and 3 used by software serial)
+-Try removing the components on the Tx line
+-Try swapping with the ATMEGA of the second board (or another board with a 328P)
+-Check voltage on Tx line
+
+2nd board (intermittent issues):
+-Also possibly the ATMEGA, or power issues?
+-Check for any voltage drops during resets
+-Load a counter program and see if it does it with it as well (so it doesn't use the EBYTE at all)
+-Disconnect the 3.3V regulator and power it separately? May be an issue with the regulator (if so then replace with the 1st board's regulator)
+-If resets occur still, perhaps swap with ATMEGA of first board (or another board with a 328P)
+
+
+Theres the one broken Nano I think (had to remove the CH340G). Can probably takes its 328P?
