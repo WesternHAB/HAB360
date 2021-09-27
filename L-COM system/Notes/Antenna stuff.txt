@@ -1,0 +1,7 @@
+Omni directional onboard, and directed on ground?
+
+Apparently should use a circular antenna when you cannot guarentee the orientation.
+Thus, avoid horizontal and vertical antennas.
+What about right and left polarized?
+
+Seems theres a 3Db loss when one is omni and one is circ ular
