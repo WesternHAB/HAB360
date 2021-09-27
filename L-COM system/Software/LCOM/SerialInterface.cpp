@@ -17,9 +17,8 @@
     bool startFlagFound = false;
     uint16_t rIdx = 0;
     uint16_t packetLen = 0;
-	uint8_t cyclicID = 0;
+    uint8_t cyclicID = 0;
     uint16_t sendBufferLen = 0;
-
     uint32_t lastCharReceivedTime = 0;
 
 
@@ -173,8 +172,8 @@
         serialSendBuffer[6] = (curTime & 0x0000FF00) >> 8;
         serialSendBuffer[7] = (curTime & 0x000000FF);
 		
-		// Payload
-		memcpy(serialSendBuffer+PAYLOAD_INDEX, payloadBuf, bufLen);
+        // Payload
+        memcpy(serialSendBuffer+PAYLOAD_INDEX, payloadBuf, bufLen);
 
         // End flag
         serialSendBuffer[bufLen+PAYLOAD_INDEX] = END_FLAG;
@@ -185,7 +184,7 @@
         // Set the send buffer length
         sendBufferLen = bufLen+PKT_HEADER_TRAILER_LEN;
         
-		return serialSendBuffer;
+        return serialSendBuffer;
     }
 	
     /*-------------------------------------------------------------------------------------*\
@@ -200,12 +199,12 @@
             for(uint16_t i = bufLen-1; i >= 2; i--) retBuf[i] = retBuf[i-2];
         }
                 
-		// Set the result field
+        // Set the result field
         retBuf[0] = (res & 0xFF00) >> 8;
         retBuf[1] = res & 0x00FF;
 		
-		// Create and return the packet
-		return createPacket(ACK_PACKET, retBuf, bufLen+2);
+        // Create and return the packet
+        return createPacket(ACK_PACKET, retBuf, bufLen+2);
     }
 
     /*-------------------------------------------------------------------------------------*\
