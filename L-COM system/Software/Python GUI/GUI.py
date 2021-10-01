@@ -57,8 +57,7 @@ optionVar = None
 
 print('Windows: COM#')
 print('Linux: /dev/ttyUSB#')
-#port = input("Enter COM port:")
-port = 'COM7'
+port = input("Enter port:")
 baud = 115200 # We can't go any higher without synchronous UART. But we need to connect a clock line which I can't to my laptop.
 
 # Open the serial port
